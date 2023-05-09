@@ -91,7 +91,14 @@ if (tree.x < -200) {
 }
             
             // TODO 5: Part 2 - Parallax
-            
+            for (var i = 0; i < buildings.length; i++){
+                building = buildings[i]
+                var building;
+                building.x = building.x - 0.1;
+                if (building.x < -200){
+                    building.x = canvasWidth
+                }
+            }
 
         } // end of update function - DO NOT DELETE
         
