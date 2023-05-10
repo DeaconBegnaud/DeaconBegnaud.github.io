@@ -39,7 +39,7 @@ var background = function (window) {
             var backgroundFill = draw.rect(canvasWidth, canvasHeight ,'green');
             background.addChild(backgroundFill);
 
-            var backgroundFill = draw.rect(canvasWidth,475,'#041e47');
+            var backgroundFill = draw.rect(canvasWidth, 475,'#041e47');
             background.addChild(backgroundFill);
             
 

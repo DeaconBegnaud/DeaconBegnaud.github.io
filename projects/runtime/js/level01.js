@@ -43,17 +43,30 @@ obstacleImage.y = -25
         createSawBlade(1500 , 350)
         createSawBlade(2000, 475)
         createSawBlade(2200, 350)
-        function createEnemy (x, y){
-            var hitZoneSize = 50
-            var damageFromObstacle = 50;
-            var enemyHitZone = game.createObstacle(hitZoneSize, damageFromObstacle)
-            enemyHitZone.x = x
-            enemyHitZone.y = y
-            game.addGameItem(enemyHitZone)
-            var enemyImage = draw.bitmap("img/\enemy robot.png")
-            enemyHitZone.addChild(enemyImage)
+
+        function createEnemy (x, y) {
+            var enemy = game.createGameItem("enemy", 25);
+var redSquare = draw.rect(50, 50, "red");
+redSquare.x = -25;
+redSquare.y = -25;
+enemy.addChild(redSquare);
+enemy.x = x;
+enemy.y = groundY - y;
+game.addGameItem(enemy)
+enemy.velocityX = -7
+enemy.velocityY = 0
+enemy.onPlayerCollision = function () {
+    game.changeIntegrity(-10)
+};
+enemy.onProjectileCollision = function () {
+    game.increaseScore(100);
+enemy.shrink();
+}
         }
-        createEnemy(1000, 500)
+        createEnemy(700, 70)
+        createEnemy (1300, 50)
+        createEnemy(2000, 30)
+        
         //work on this
         
         // DO NOT EDIT CODE BELOW HERE
