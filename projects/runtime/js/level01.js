@@ -16,13 +16,22 @@ var level01 = function (window) {
             "number": 1, 
             "speed": -3,
             "gameItems": [
-                { "type": "sawblade", "x": 400, "y": groundY },
-                { "type": "sawblade", "x": 600, "y": groundY },
-                { "type": "sawblade", "x": 900, "y": groundY },
+                { "type": "sawblade", "x": 750, "y": groundY },
+                { "type": "sawblade", "x": 2000, "y": groundY },
+                { "type": "sawblade", "x": 2250, "y": groundY },
+                { "type": "sawblade", "x": 1500, "y": 350 },
+                { "type": "sawblade", "x": 2100, "y": 350 },
                 {"type": "enemy", "x": 700, "y": 70},
+                {"type": "enemy", "x": 1300, "y": 50},
+                {"type": "enemy", "x": 2000, "y": 30},
+                {"type": "enemy", "x": 1200, "y": 40},
+                {"type": "enemy", "x": 1700, "y": 60},
                 {"type": "reward", "x": 1000, "y": 70},
+                {"type": "reward", "x": 2500, "y": 50},
+                {"type": "reward", "x": 1500, "y": 70},
             ]
         };
+     // I couldn't figure out the loop, so I just decided to stop.
         window.levelData = levelData;
         // set this to true or false depending on if you want to see hitzones
         game.setDebugMode(true);
