@@ -47,11 +47,11 @@ init();
 
 function init() {
   // TODO 4b-2: initialize the apple
-  makeApple()
+  
   // TODO 4c-2: initialize the snake
   // initialize the snake's body as an empty Array
  snake.body = [];
-
+ makeApple()
  // make the first snakeSquare and set it as the head
  makeSnakeSquare(10, 10);
  snake.head = snake.body[0];
@@ -368,7 +368,14 @@ function getRandomAvailablePosition() {
     not occupied by a snakeSquare in the snake's body. If it is then set 
     spaceIsAvailable to false so that a new position is generated.
     */
-    
+    for (var i = 1; i < snake.body.length; i++) {
+      var snakeSquare = snake.body[i];
+      if (randomPosition.row === snakeSquare.row && randomPosition.column === snakeSquare.column) {
+        spaceIsAvailable = false;
+        console.log(spaceIsAvailable)
+      }
+    }
+
 
   }
 
